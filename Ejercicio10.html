@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <div id="root">
+        <!--Render code React-js-->
+    </div>
+
+    <!-- Cargar React. -->
+    <!-- Nota: cuando se despliegue, reemplazar "development.js" con "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- Cargamos nuestro componente de React. -->
+    <script type="text/babel">
+        // nota cada codigo que veas documentado de aca para abajo
+        // seran diferentes formas de realizarlo con jsx los coloco para
+        // que podamos probar y mirar diferentes formas de como podriamos realizarlos
+        // los 12 ejercicios
+
+        // 0. guardado de datos simple
+        const data = {
+            titulo: "Recetas.com",
+            texto1: "Bienvenido a nuestro sitio web de gastronomia latina, te invitamos a preparar nuestras recetas",
+            subtitulo1: "Nuevas Recetas",
+            subtitulo2: "**Arroz criollo**",
+            subtitulo3: "Ingredientes",
+            texto31: "salsa de tomate",
+            texto32: "2 cucharadas de aceite 14gr",
+            texto33: "1 cebolla larga picada 45gr",
+            texto34: "2 dientes de ajo finamente picado 3gr",
+            texto35: "1 pimenton rojo picado en cuadritos 60gr",
+            texto36: "1 taza de arroz blanco 225gr",
+            texto37: "1 taza de maiz desgranado 79gr",
+            texto38: "150gr de pechuga de pollo cocinado y desmechado",
+            texto39: "sal algusto",
+            subtitulo4: "Preparacion",
+            texto41: "Celentar en una olla el aceite, sofreir la cebolla junto con el ajo, el pimenton por 3 minutos.",
+            texto42: "adicionar el arroz y continua sofriendo para que se dore.",
+            texto43: "agregar el pollo, el maiz desgranado y las verduras.",
+            texto44: "Mezclar todo, rectificar de sal y dejar cocinar hast que seque.",
+            texto45: "bajar el fuego, tapar la olla y continuar la coccion por 25 minutos mas",
+            texto5: "Esta rica receta fue proporcionada por Maria Paula."
+        }
+
+        const element = (
+            <div>
+                <img src="cocina.jpg" width="50" align="left" />
+                <h1>{data.titulo}</h1>
+                <br /><br /><br />
+                <a href="https://www.hogarmania.com/cocina/recetas/"> Recetas Principales</a> <a href="https://www.latam.com/vamos/es_ar/articulos/lista-latam/trece-postres-que-los-latinoamericanos-quieren-que-descubras/"> Postres Latinos</a>
+                <br /><br /><br />
+                <p>{data.texto1}</p>
+                <h2>{data.subtitulo1}</h2>
+                <h3>{data.subtitulo2}</h3>
+                <p>Tiempo de preparacion: <b>45 minutos</b> Numero de porciones <b>4</b></p>
+                <h3>{data.subtitulo3}</h3>
+                <ul><li><b>{data.texto31}</b></li>
+                    <li><b>{data.texto32}</b></li>
+                    <li><b>{data.texto33}</b></li>
+                    <li><b>{data.texto34}</b></li>
+                    <li><b>{data.texto35}</b></li>
+                    <li><b>{data.texto36}</b></li>
+                    <li><b>{data.texto37}</b></li>
+                    <li><b>{data.texto38}</b></li>
+                    <li><b>{data.texto39}</b></li>
+                </ul>
+                <h3>{data.subtitulo4}</h3>
+                <ol><li>{data.texto41}</li>
+                    <li>{data.texto42}</li>
+                    <li>{data.texto43}</li>
+                    <li>{data.texto44}</li>
+                    <li>{data.texto45}</li>
+                </ol>
+                <p>{data.texto5}</p>
+
+            </div>
+        )
+
+        // Renderiamos o pintamos
+        ReactDOM.render(
+            element,// estructura jsx para pintar
+            document.getElementById('root')// elemento donde se pintara
+        );
+    </script>
+</body>
+
+</html>
